@@ -9,7 +9,7 @@ function calcularIMC() {
         console.log()
         const descricao = $('#descricao')
         if (imc < 17) {
-            descricao.text( "muito abaixo do peso")
+            descricao.text("muito abaixo do peso")
             descricao.addClass("text-danger")
         } else if (imc > 17 && imc <= 18.49) {
             descricao.text("abaixo do peso")
@@ -21,7 +21,7 @@ function calcularIMC() {
             descricao.text("acima do peso")
             descricao.addClass("text-info")
         } else if (imc > 30 && imc <= 34.99) {
-            descricao.text( "obesidade 1")
+            descricao.text("obesidade 1")
             descricao.addClass("text-info")
         } else if (imc > 35 && imc <= 39.99) {
             descricao.text("obesidade 2 (severa)")
@@ -31,26 +31,26 @@ function calcularIMC() {
             descricao.addClass("text-danger")
         }
     } else {
-       const mensagemDeErro = $("#mensagemDeErro")
-       mensagemDeErro.text( "não foi possivel calcular seu IMC")
+        const mensagemDeErro = $("#mensagemDeErro")
+        mensagemDeErro.text("não foi possivel calcular seu IMC")
 
-       const resultado = $('#resultado');
-       resultado.text("")
+        const resultado = $('#resultado');
+        resultado.text("")
 
-       const altura = $('#altura')
-       const peso = $('#peso')
+        const altura = $('#altura')
+        const peso = $('#peso')
 
-       if (!altura.val()) {
+        if (!altura.val()) {
             altura.addClass("is-invalid")
-       } else {
-        altura.addClass("is-invalid")
-       }
+        } else {
+            altura.addClass("is-invalid")
+        }
 
-       if (!altura.val()) {
-        altura.addClass("is-invalid")
-   } else {
-    altura.addClass("is-invalid")
-   }
+        if (!peso.val()) {
+            peso.addClass("is-invalid")
+        } else {
+            peso.addClass("is-invalid")
+        }
 
     }
 }
@@ -62,24 +62,24 @@ function limpar() {
     peso.val("")
     altura.val("")
 
-    peso.removeClass("is-valid", "is-invalid")
-    altura.removeClass("is-valid", "is-invalid")
+    peso.removeClass("is-valid is-invalid")
+    altura.removeClass("is-valid is-invalid")
 
     const resultado = $('#resultado');
-       resultado.text("")
+    resultado.text("")
 
     const descricao = $('#descricao');
     descricao.text("")
 
     const mensagemDeErro = $('#mensagemDeErro');
     mensagemDeErro.text("")
-    
+
 }
 
 const altura = $('#altura')
 const peso = $('#peso')
 console.log(peso)
-peso.on('input', function() {
+peso.on('input', function () {
     if (peso.val().length > 0) {
         peso.removeClass("is-invalid")
         peso.addClass("is-valid")
@@ -88,7 +88,7 @@ peso.on('input', function() {
     }
 })
 
-altura.on('input', function() {
+altura.on('input', function () {
     if (altura.val().length > 0) {
         altura.removeClass("is-invalid")
         altura.addClass("is-valid")
