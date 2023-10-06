@@ -9,25 +9,25 @@ function calcularIMC() {
         console.log()
         const descricao = $('#descricao')
         if (imc < 17) {
-            descricao.text("muito abaixo do peso")
+            descricao.text("Muito abaixo do peso")
             descricao.addClass("text-danger")
         } else if (imc > 17 && imc <= 18.49) {
-            descricao.text("abaixo do peso")
-            descricao.addClass("text-dark")
+            descricao.text("Abaixo do peso")
+            descricao.addClass("text-danger")
         } else if (imc > 18, 5 && imc <= 24.99) {
-            descricao.text("peso nolmal")
+            descricao.text("Peso Normal")
             descricao.addClass("text-primary")
         } else if (imc > 25 && imc <= 29.99) {
-            descricao.text("acima do peso")
-            descricao.addClass("text-info")
+            descricao.text("Acima do peso")
+            descricao.addClass("text-danger")
         } else if (imc > 30 && imc <= 34.99) {
-            descricao.text("obesidade 1")
-            descricao.addClass("text-info")
+            descricao.text("Obesidade 1")
+            descricao.addClass("text-danger")
         } else if (imc > 35 && imc <= 39.99) {
-            descricao.text("obesidade 2 (severa)")
+            descricao.text("Obesidade 2 (Severa)")
             descricao.addClass("text-danger")
         } else {
-            descricao.text("obesidade 3 (morbita)")
+            descricao.text("Obesidade 3 (Morbita)")
             descricao.addClass("text-danger")
         }
     } else {
