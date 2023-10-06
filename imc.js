@@ -14,7 +14,7 @@ function calcularIMC() {
         } else if (imc > 17 && imc <= 18.49) {
             descricao.text("Abaixo do peso")
             descricao.addClass("text-danger")
-        } else if (imc > 18, 5 && imc <= 24.99) {
+        } else if (imc > 18.50 && imc <= 24.99) {
             descricao.text("Peso Normal")
             descricao.addClass("text-primary")
         } else if (imc > 25 && imc <= 29.99) {
